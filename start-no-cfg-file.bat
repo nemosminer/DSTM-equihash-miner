@@ -2,7 +2,7 @@
 @echo Don't forget to change your pool and login information.
 @echo #######################################################
 
-zm.exe --cfg-file=zm.cfg
+zm --server eu1-zcash.flypool.org  --port 3333 --user t1Ja3TR6QBRDUd897sLn1YSeKc8HnWmvHbu --color
 
 @echo off
 REM Usage:

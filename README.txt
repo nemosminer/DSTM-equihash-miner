@@ -6,6 +6,8 @@ Official site: Official site: https://bitcointalk.org/index.php?topic=2021765.0
 - Supports stratum/pool based mining.
 - Multi-GPU support.
 - Supports remote monitoring
+- Supports setup of failover pools
+- Supports configuration using configuration files
 - contains 2% development fee
 
 
@@ -24,7 +26,7 @@ Windows:
 Usage
 =====
 
-To get a description about available options - launch zm without parameter.
+To get a description about available options - launch zm without parameters.
 
 Minimal example:
  zm --server servername.com --port 1234 --user username
@@ -33,25 +35,28 @@ Packages for windows include a 'start.bat' for simplicity.
 Don't forget to change your pool and login information.
 
 $ zm --help
-ZM 0.5.4, dstm's ZCASH/Equihash Cuda Miner
+ZM 0.6, dstm's ZCASH/Equihash Cuda Miner
 
 Usage:
  zm --server hostname --port port_nr --user user_name
     [--pass password] [options]...
+
+ zm --cfg-file[=path]
 
  Stratum:
     --server         Stratum server hostname
                      prefix hostname with 'ssl://' for encrypted
                      connections - e.g. ssl://mypool.com
     --port           Stratum server port number
-    --user           Username / Workername
+    --user           Username
     --pass           Worker password
 
  Options:
     --help           Print this help
+    --list-devices   List available cuda devices to use
     --dev            Space separated list of cuda devices
-    --list-devices   List available cuda devices
     --time           Enable output of timestamps
+    --color          colorize the output
     --logfile        [=path] Append logs to the file named by 'path'
                      If 'path' is not given append to 'zm.log' in
                      current working directory.
@@ -68,6 +73,12 @@ Usage:
                      If no arguments are given the server listens on
                      127.0.0.1:2222 - Example: --telemetry=0.0.0.0:2222
                      Valid port range [1025-65535]
+
+    --cfg-file       [=path] Use configuration file. All additional command
+                     line options are ignored - configuration is done only
+                     through configuration file. If 'path' is not given
+                     use 'zm.cfg' in current working directory.
+
  Example:
     zm --server servername.com --port 1234 --user username
 

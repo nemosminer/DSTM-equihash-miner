@@ -1,7 +1,7 @@
 dstm's ZCash / Equihash Nvidia Miner
 ------------------------------------
 
-Copyright (c) 2017 dstm
+Copyright (c) 2018 dstm
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
